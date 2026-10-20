@@ -1,0 +1,12 @@
+body { font-family: Arial, sans-serif; margin: 20px; background: #fff8e7; color: #222; }
+h1 { margin-top: 0; }
+.controls { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; margin-bottom: 20px; }
+.controls label { display: block; margin-bottom: 4px; }
+.controls input { padding: 4px; width: 120px; }
+.error { color: #c0392b; font-size: 13px; min-height: 16px; margin-top: 3px; }
+button { padding: 6px 16px; cursor: pointer; }
+.areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.area { background: #fff; border: 2px solid #e67e22; border-radius: 6px; padding: 10px; }
+.area h2 { font-size: 16px; margin: 0 0 8px; }
+.box { border: 1px solid #999; padding: 4px 6px; margin-bottom: 6px; min-height: 22px; background: #fafafa; word-break: break-word; }
+.visual { font-size: 20px; min-height: 28px; word-break: break-all; }

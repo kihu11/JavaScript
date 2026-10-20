@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fast Food Simulator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Fast Food Simulator</h1>
+
+<div class="controls">
+  <div>
+    <label for="arrival">Интервал прихода клиентов (сек)</label>
+    <input id="arrival" type="text" value="2">
+    <div class="error" id="arrivalError"></div>
+  </div>
+  <div>
+    <label for="cook">Интервал приготовления заказа (сек)</label>
+    <input id="cook" type="text" value="3">
+    <div class="error" id="cookError"></div>
+  </div>
+  <div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </div>
+</div>
+
+<div class="areas">
+  <div class="area">
+    <h2>Очередь на заказ</h2>
+    <div class="box" id="lineCount">0</div>
+    <div class="visual" id="lineVisual"></div>
+  </div>
+  <div class="area">
+    <h2>Приём заказа</h2>
+    <div class="box" id="takingOrder">-</div>
+    <div class="visual" id="takerVisual"></div>
+  </div>
+  <div class="area">
+    <h2>Кухня</h2>
+    <div class="box" id="cooking">-</div>
+    <div class="box" id="waiting">Ожидают (0): -</div>
+    <div class="visual" id="kitchenVisual"></div>
+  </div>
+  <div class="area">
+    <h2>Выдача</h2>
+    <div class="box" id="pickup">-</div>
+    <div class="box" id="servingCount">0</div>
+    <div class="visual" id="servingVisual"></div>
+  </div>
+  <div class="area">
+    <h2>Зал</h2>
+    <div class="box" id="diningCount">0</div>
+    <div class="visual" id="diningVisual"></div>
+  </div>
+</div>
+
+<script src="state.js"></script>
+<script src="utils.js"></script>
+<script src="validation.js"></script>
+<script src="ui.js"></script>
+<script src="actors.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
+
+//sstat@grsu.by
