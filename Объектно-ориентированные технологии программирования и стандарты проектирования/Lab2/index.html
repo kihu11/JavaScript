@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Проверка регулярных выражений</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>  
+<h2>Проверка регулярных выражений</h2>
+<p>Поддерживается: символы, <code>.</code>, <code>|</code>, <code>*</code>, <code>+</code>, <code>?</code>, скобки и <code>\</code>.</p>
+ 
+<label for="pattern">Выражение</label>
+<input id="pattern" value="a(b|c)*d">
+ 
+<label for="text">Строка</label>
+<textarea id="text" rows="4">xxabcbdyy</textarea>
+ 
+<button id="btn">Проверить</button>
+<div id="status"></div>
+<div id="result"></div>
+ 
+<script src="parser.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
+ //sstat@grsu.by
