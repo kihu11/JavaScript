@@ -1,0 +1,97 @@
+:root {
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  --bg: #f3f4f6; --card: #ffffff; --text: #1f2937; --muted: #6b7280;
+  --accent: #e8590c; --accent-text: #ffffff; --dark: #111827; --dark-text: #f9fafb; --line: #e5e7eb;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1115; --card: #1a1d24; --text: #e5e7eb; --muted: #9ca3af;
+    --accent: #ff7a2f; --accent-text: #111827; --dark: #000000; --dark-text: #f9fafb; --line: #2a2e38;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1115; --card: #1a1d24; --text: #e5e7eb; --muted: #9ca3af;
+  --accent: #ff7a2f; --accent-text: #111827; --dark: #000000; --dark-text: #f9fafb; --line: #2a2e38;
+  color-scheme: dark;
+}
+
+body { font-family: "Segoe UI", Roboto, Arial, sans-serif; }
+
+/* компьютер и планшет*/
+.wrapper {
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "header   header   header"
+    "hero     hero     hero"
+    "services services services"
+    "about    booking  booking"
+    "footer   footer   footer";
+}
+.header   { grid-area: header; }
+.hero     { grid-area: hero; }
+.services { grid-area: services; }
+.about    { grid-area: about; }
+.booking  { grid-area: booking; }
+.footer   { grid-area: footer; }
+
+.block { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+h1 { font-size: 2.2rem; line-height: 1.15; margin-bottom: 12px; }
+h2 { font-size: 1.4rem; margin-bottom: 14px; }
+p { color: var(--muted); }
+
+.header { display: flex; justify-content: space-between; align-items: center; background: var(--dark); color: var(--dark-text); border-radius: 14px; padding: 14px 24px; }
+.logo { font-size: 1.4rem; font-weight: 700; }
+.logo span { color: var(--accent); }
+.burger { display: none; background: none; border: 0; color: var(--dark-text); font-size: 1.6rem; cursor: pointer; }
+
+.hero { background: linear-gradient(135deg, var(--dark), #374151); color: var(--dark-text); border: 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+.hero p { color: #d1d5db; margin-bottom: 20px; }
+.btn { display: inline-block; background: var(--accent); color: var(--accent-text); border: 0; border-radius: 10px; padding: 12px 22px; font-size: 1rem; font-weight: 600; cursor: pointer; text-decoration: none; }
+.btn:hover { opacity: .9; }
+
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.card { border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
+.card .ico { font-size: 1.8rem; }
+.card h3 { margin: 6px 0; }
+.card .price { color: var(--accent); font-weight: 700; margin-top: 6px; }
+
+.about ul { padding-left: 18px; color: var(--muted); }
+
+form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+form .wide { grid-column: 1 / -1; }
+label { display: flex; flex-direction: column; gap: 4px; font-size: .9rem; color: var(--muted); }
+input, select { padding: 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 1rem; }
+#msg { margin-top: 12px; font-weight: 600; color: var(--accent); min-height: 1.5em; }
+
+.footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; background: var(--dark); color: var(--dark-text); border-radius: 14px; padding: 18px 24px; }
+
+/* телифон*/
+@media (max-width: 700px) {
+  .wrapper {
+    display: flex;           
+    flex-direction: column;   
+    padding: 10px;
+    gap: 12px;
+  }
+  h1 { font-size: 1.6rem; }
+  .block { padding: 18px; }
+
+  .header { flex-wrap: wrap; }
+  .burger { display: block; }
+  .nav { display: none; flex-direction: column; width: 100%; gap: 10px; padding-top: 12px; }
+  .nav.open { display: flex; }
+
+  .cards { display: flex; flex-direction: column; }
+  form { display: flex; flex-direction: column; }
+  .footer { flex-direction: column; align-items: center; text-align: center; }
+}

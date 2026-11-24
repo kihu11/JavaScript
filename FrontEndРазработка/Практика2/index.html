@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика 2</title>
+</head>
+
+<body>
+
+    <form id="personForm">
+        <h1>Введите данные</h1>
+        <p>
+            <label>Имя:
+                <input type="text" id="firstName" name="firstName">
+            </label>
+        </p>
+
+        <p>
+            <label>Фамилия:
+                <input type="text" id="lastName" name="lastName">
+            </label>
+        </p>
+
+        <p>
+            <label>Возраст:
+                <input type="text" id="age" name="age">
+            </label>
+        </p>
+
+        <p>
+            <label>Новый возраст:
+                <input type="text" id="newAge" name="newAge">
+            </label>
+        </p>
+
+        <p>
+            <button type="button" id="btnShow">Показать полное имя</button>
+            <button type="button" id="btnChange">Изменить возраст</button>
+        </p>
+    </form>
+
+    <div id="result"></div>
+    <div id="error" style="color: red;"></div>
+
+    <script src="validate.js"></script>
+    <script src="Person.js"></script>
+    <script src="output.js"></script>
+</body>
+
+</html>

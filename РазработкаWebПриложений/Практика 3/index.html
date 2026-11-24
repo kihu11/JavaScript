@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Автосервис</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+
+  <header class="header">
+<div class="logo">Авто<span>Мастер</span></div>  </header>
+
+  <section class="block hero">
+    <h1>Ремонт и обслуживание автомобилей</h1>
+    <p>Диагностика, замена масла, шиномонтаж и кузовной ремонт. Гарантия на все работы до 12 месяцев.</p>
+  </section>
+
+  <section class="block services" id="services">
+    <h2>Наши услуги</h2>
+    <div class="cards">
+      <div class="card"><div class="ico"></div><h3>Замена масла</h3><p>Масло и фильтр за 30 минут.</p><div class="price">от 150</div></div>
+      <div class="card"><div class="ico"></div><h3>Диагностика</h3><p>Компьютерная и ходовой части.</p><div class="price">от 100</div></div>
+      <div class="card"><div class="ico"></div><h3>Шиномонтаж</h3><p>Снятие, балансировка, установка.</p><div class="price">от 200</div></div>
+      <div class="card"><div class="ico"></div><h3>Кузовной ремонт</h3><p>Покраска и устранение вмятин.</p><div class="price">от 500</div></div>
+    </div>
+  </section>
+
+  <section class="block about" id="about">
+    <h2>О нас</h2>
+    <ul>
+      <li>Опыт работы более 10 лет</li>
+      <li>Работаем ежедневно с 9:00 до 21:00</li>
+    </ul>
+  </section>
+
+  <section class="block booking" id="booking">
+    <h2>Онлайн-запись</h2>
+    <form id="form">
+      <label>Имя<input type="text" id="name" required></label>
+      <label>Телефон<input type="tel" id="phone" required></label>
+      <label>Услуга
+        <select id="service">
+          <option>Замена масла</option><option>Диагностика</option>
+          <option>Шиномонтаж</option><option>Кузовной ремонт</option>
+        </select>
+      </label>
+      <label>Дата<input type="date" id="date" required></label>
+      <button class="btn wide" type="submit">Отправить заявку</button>
+    </form>
+    <div id="msg"></div>
+  </section>
+
+  <footer class="footer" id="footer">
+    <span>2026 АвтоМастер</span>
+    <span>+999999999</span>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

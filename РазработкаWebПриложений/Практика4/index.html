@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Веб-Дозор: Симулятор блокировщика рекламы</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+
+<div class="panel">
+  <b>Веб-Дозор</b>
+  <span>Игрок: <b id="nameView"></b></span>
+  <span>XP: <b id="xp"></b></span>
+  <span>Трафик: <b id="traffic"></b> МБ</span>
+  <span>VIP: <b id="vip"></b></span>
+  <span>Угроз в базе: <b id="count">0</b></span>
+</div>
+
+<div class="panel">
+  Имя: <input id="nameInput" size="10">
+  Тема: <select id="theme">
+    <option value="light">Светлая</option>
+    <option value="dark">Тёмная</option>
+  </select>
+  <button id="vipBtn">Получить VIP (5 мин)</button>
+</div>
+
+<div id="game">
+  <div id="quarantine">📦 Карантин</div>
+</div>
+
+<div id="logs"></div>
+
+<div id="captcha" class="overlay">
+  <div>Капча-атака! Введите код:</div>
+  <div id="captchaText"></div>
+  <input id="captchaInput">
+  <button id="captchaBtn">Проверить</button>
+  <div id="captchaMsg"></div>
+</div>
+
+<div id="over" class="overlay">
+  <h2>Система заражена!</h2>
+  <button id="restart">Играть снова</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

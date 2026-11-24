@@ -1,0 +1,30 @@
+объясвления
+Function Declaration 
+function sum (a, b ){return a + b}
+
+Стрелочная функция 
+const sum = (a,b) => a + b;
+
+Function Expression
+const sum = function(a,b) {return a + b};
+
+виды:
+стрелочная(this)
+асинхронный(вызывает promise)
+обчный 
+конструкторы(вызывает new)
+рекурсиввные 
+
+передача данных:
+local\session storage
+cookie
+глобальные переменные 
+через объекты контейнеры
+модули imort/export
+
+
+объясвления и использование:
+const user = {name: "kit", age = 19
+greet(){return `Hi ${this.name}`}};
+
+console.log(user.name);

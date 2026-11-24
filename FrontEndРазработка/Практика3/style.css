@@ -1,0 +1,17 @@
+body {
+  background: white;
+  color: #222;
+  font-family: Arial, sans-serif;
+  padding: 40px;
+}
+
+body.dark {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
